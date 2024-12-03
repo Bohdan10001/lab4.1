@@ -1,0 +1,44 @@
+#include <iostream>;
+#include <cmath>;
+
+using namespace std;
+int main()
+{
+	int N;
+	int i;
+	double S;
+
+	cout << " N = "; cin >> N;
+	S = 0;
+	i = N; 
+	//1.
+	while (i <= 22) 
+	{
+		S += sin(0.1 * sqrt(pow(i + N, 2))) / i;
+		i++;
+	}
+	cout << S << endl;
+	//2.
+	S = 0;
+	i = N;
+	do {
+		S += sin(0.1 * sqrt(pow(i + N, 2))) / i;
+		i++;
+	} while (i <= 22);
+		cout << S << endl;
+		//3.
+		S = 0;
+		for (i = N; i <= 22; i++)
+		{
+			S += sin(0.1 * sqrt(pow(i + N, 2))) / i;
+		}
+		cout << S << endl;
+		// 4.
+		S = 0;
+		for (i = N; i >= 22; i--)
+		{
+			S += sin(0.1 * sqrt(pow(i + N, 2))) / i;
+		}
+		cout << S << endl;
+		return 0;
+}
